@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio de Gustavo Farias da Silva</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #0a0a0a, #343a40);
+            color: white;
+        }
+        nav {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s;
+        }
+        nav:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+        nav a {
+            color: #00aaff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #0088cc;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 0.5s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .foto {
+            display: block;
+            margin: 20px auto;
+            border-radius: 50%;
+            width: 180px; 
+            height: 180px; 
+            object-fit: cover; 
+            border: 5px solid #00aaff; 
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+        }
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+            color: #ffffff;
+            margin: 10px 0;
+            font-size: 2.5em;
+        }
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: #00aaff;
+            margin-top: 30px;
+            border-bottom: 2px solid #00aaff;
+            padding-bottom: 5px;
+            font-size: 1.8em;
+        }
+        p, ul {
+            line-height: 1.6;
+            color: #ffffff;
+            font-size: 1.1em;
+        }
+        .projeto, .skill {
+            margin: 15px 0;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .projeto:hover, .skill:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.4);
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 10px 0;
+        }
+        .skill {
+            flex: 1 1 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .skill:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+        a {
+            text-decoration: none;
+            color: #00aaff;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #aaaaaa;
+            font-size: 0.9em;
+        }
+        button {
+            background-color: #00aaff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Roboto', sans-serif;
+            transition: background-color 0.3s, transform 0.3s;
+            display: block;
+            margin: 20px auto;
+        }
+        button:hover {
+            background-color: #0088cc;
+            transform: scale(1.05);
+        }
+        .testemunhos {
+            margin-top: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+        }
+        .form-contato {
+            margin-top: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+        }
+        .form-contato label {
+            display: block;
+            margin-bottom: 5px;
+            color: #ffffff;
+        }
+        .form-contato input, 
+        .form-contato textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #00aaff;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+        .form-contato button.btn-enviar {
+            background-color: #00aaff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .form-contato button.btn-enviar:hover {
+            background-color: #0088cc;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#habilidades">Habilidades</a>
+    <a href="#experiencia">Experiência</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#testemunhos">Testemunhos</a>
+    <a href="#contato">Contato</a>
+</nav>
+
+<div class="container" id="sobre">
+    <h1>Portfólio de Gustavo Farias da Silva</h1>
+    <img src="foto-gustavo.jpg" alt="Foto de Gustavo" class="foto">
+    <p><strong>Descrição:</strong> Sou um profissional dinâmico e curioso, com uma vasta experiência em diversas áreas 
+        dentro de empresas. Ao longo da minha carreira, tive a oportunidade de explorar diferentes funções e projetos,
+         o que me proporcionou uma visão ampla e integrada dos desafios e oportunidades no ambiente corporativo. 
+         Estou sempre em busca de inovações e soluções criativas, adaptando-me rapidamente às mudanças e aprendendo 
+         continuamente. Meu objetivo é aplicar minhas habilidades e conhecimentos para contribuir efetivamente para o 
+         sucesso da equipe e da empresa como um todo.</p>
+    <p><strong>Contato:</strong> <a href="mailto:fariasgustavo797@gmail.com">fariasgustavo797@gmail.com</a></p>
+    <p><strong>Instagram:</strong> <a href="https://www.instagram.com/gustavv_fs" target="_blank">@gustavv_fs</a></p>
+    <p><strong>GitHub:</strong> <a href="https://github.com/Gustavofariass15" target="_blank">github.com/Gustavofariass15</a></p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/gustavo-farias-da-silva-60bb90300" target="_blank">gustavo farias da silva</a></p>
+
+    <h2 id="habilidades">Habilidades</h2>
+    <div class="skills">
+        <div class="skill"><i class="fab fa-java"></i> Java</div>
+        <div class="skill"><i class="fab fa-html5"></i> Desenvolvimento Web</div>
+        <div class="skill"><i class="fas fa-database"></i> SQL</div>
+        <div class="skill"><i class="fab fa-git"></i> Git</div>
+    </div>
+
+    <h2 id="experiencia">Experiência Profissional</h2>
+    <div class="projeto">
+        <strong>Ferragem Primor - Atendente e Supervisor </strong> (2022 - 2024)<br>
+        Durante minha trajetória profissional, sempre me dediquei a compartilhar meu 
+        conhecimento e experiências, promovendo um ambiente colaborativo e motivador. Meu foco sempre foi o 
+        desenvolvimento contínuo, tanto pessoal quanto da equipe, buscando constantemente soluções criativas para 
+        desafios complexos. Acredito que a transferência de conhecimento é essencial para o crescimento coletivo, e 
+        estou comprometido em inspirar outros a alcançarem seu máximo potencial. Essa abordagem não apenas fortaleceu 
+        nossa equipe, mas também contribuiu para o sucesso da empresa como um todo.
+    </div>
+
+    <h2 id="projetos">Projetos</h2>
+    <div class="projeto">
+        <strong>Fórmula de Bhaskara</strong><br>
+        Este projeto é uma ferramenta interativa que calcula as raízes de uma equação quadrática utilizando a fórmula 
+        de Bhaskara. O usuário pode inserir os coeficientes da equação e, em seguida, receberá as raízes calculadas e 
+        uma análise sobre a existência de raízes reais. É uma ótima maneira de entender a aplicação prática da matemática 
+        e pode ser utilizada tanto em ambientes educacionais quanto em desenvolvimentos acadêmicos. 
+        <br><a href="file:///C:/Users/aluno.saolucas/Documents/guxta/index.html" target="_blank">Ver Projeto</a>
+    </div>
+
+    <h2 id="testemunhos">Testemunhos</h2>
+    <div class="testemunhos">
+        <p>"Gustavo é um profissional excepcional, sempre pronto para ajudar e ensinar!" - Gerente</p>
+    </div>
+
+    <h2 id="contato">Entre em Contato</h2>
+    <p>Estou sempre aberto a novas oportunidades e colaborações. Sinta-se à vontade para me contatar!</p>
+    <button onclick="window.location.href='mailto:fariasgustavo797@gmail.com'">Enviar Email</button>
+
+    <form action="https://formsubmit.co/fariasgustavo797@gmail.com" method="POST" class="form-contato">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" placeholder="Seu Nome" required> 
+    
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Seu Email" required>
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="obrigado.html"> <!-- Modificado -->
+    
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" placeholder="Sua mensagem" rows="6" required></textarea>
+    
+        <button type="submit" class="btn-enviar">Enviar</button>
+    </form>
+    
+</div>
+
+<footer>
+    &copy; 2024 Gustavo Farias da Silva
+</footer>
+
+</body>
+</html>
