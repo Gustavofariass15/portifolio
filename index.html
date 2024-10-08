@@ -181,13 +181,6 @@
             background-color: #0088cc;
             transform: scale(1.05);
         }
-        .mensagem-enviada {
-            display: none;
-            text-align: center;
-            color: #00ff00;
-            margin-top: 20px;
-            font-weight: bold;
-        }
     </style>
 </head>
 <body>
@@ -252,24 +245,27 @@
     <h2 id="contato">Entre em Contato</h2>
     <p>Estou sempre aberto a novas oportunidades e colaborações. Sinta-se à vontade para me contatar!</p>
     <button onclick="window.location.href='mailto:fariasgustavo797@gmail.com'">Enviar Email</button>
+
+    <!-- Contact Form -->
     <form action="https://formsubmit.co/fariasgustavo797@gmail.com" method="POST" class="form-contato">
         <label for="nome">Nome</label>
         <input type="text" id="nome" name="nome" placeholder="Seu Nome" required> 
-    
+
         <label for="email">Email</label>
         <input type="email" id="email" name="email" placeholder="Seu Email" required>
-    
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_next" value="https://Gustavofariass15.github.io/portifolio/obrigado.html">
-    
+
         <label for="mensagem">Mensagem</label>
         <textarea id="mensagem" name="mensagem" placeholder="Sua mensagem" rows="6" required></textarea>
-    
+
         <button type="submit" class="btn-enviar">Enviar</button>
-    </form>    
-    <div class="mensagem-enviada" id="mensagem-enviada">Mensagem enviada! Obrigado pelo seu contato.</div>
+    </form>
 </div>
 
 <footer>
     &copy; 2024 Gustavo Farias da Silva
 </footer>
+
+</body>
+</html>
